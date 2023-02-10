@@ -1,2 +1,11 @@
-# journalyze
-python library that fetches journal prompts, generates trackers (e.g. mood tracker, sleep tracker, memory tracker) and year recaps to facilitate the journinaling experience
+# Journalyze
+
+A Python library to facilitate the journinaling experience.
+
+![GitHub](https://img.shields.io/badge/license-MIT-ff69b4)
+
+## Overview
+Journalyze:
+* Creates visual trackers (e.g. mood, sleep, habits)
+* Creates Journaling Wrapped (recaps like Spotify)
+* Fetches journaling prompts 
