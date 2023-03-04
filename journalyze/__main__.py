@@ -1,4 +1,6 @@
-from .journalyze import print_hello
+from journalyze import generate_prompt
 
 if __name__ == "__main__":
-    print_hello()
+    prompt = generate_prompt()
+    print(prompt)
+
