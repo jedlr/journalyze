@@ -1,6 +1,13 @@
-from journalyze import generate_prompt
+from journalyze import DailyPrompt
 
 if __name__ == "__main__":
-    prompt = generate_prompt()
+    dp = DailyPrompt('journalyze/prompts.csv')
+    prompt = dp.get_prompt()
     print(prompt)
+
+    #dp.add_prompt('What was something you learned today?')
+    #dp.remove_prompt('What was something you learned today?')
+    #dp.save_prompts()
+
+
 
