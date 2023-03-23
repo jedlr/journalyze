@@ -58,6 +58,9 @@ jobs:
         name: pytest-results-${{ matrix.os }}-${{ matrix.python-version }}
         path: python_junit.xml
       if: ${{ always() }}
-
-    - name: Upload coverage
+      
+    - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3
+      
+      
+
