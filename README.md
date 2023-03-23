@@ -6,6 +6,9 @@ A Python library to facilitate the journinaling experience.
 
 [![](https://img.shields.io/github/issues/jedlr/journalyze?color=ff69b4)](https://github.com/jedlr/journalyze/issues)
 
+[![Build Status](https://github.com/jedlr/journalyze/workflows/Build%20Status/badge.svg?branch=main)](https://github.com/jedlr/journalyze/actions?query=workflow%3A%22Build+Status%22)
+[![codecov](https://codecov.io/gh/jedlr/journalyze/branch/main/graph/badge.svg)](https://codecov.io/gh/jedlr/journalyze)
+
 ## Overview
 Journalyze:
 * Fetches journaling prompts 
