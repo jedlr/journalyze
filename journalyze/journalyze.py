@@ -23,10 +23,4 @@ class DailyPrompt:
     def remove_prompt(self, prompt):
         self.prompts.remove(prompt)
 
-    # save the current list of prompts to the CSV file
-    def save_prompts(self):
-        with open(self.prompts_file, 'w', newline='') as f:
-            writer = csv.writer(f)
-            for prompt in self.prompts:
-                writer.writerow([prompt])
 
