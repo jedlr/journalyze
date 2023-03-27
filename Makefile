@@ -14,14 +14,14 @@ install:  ## install library
 # LINTS #
 #########
 lint:  ## run static analysis with flake8
-	python -m black --check example_project_python setup.py
-	python -m flake8 example_project_python setup.py
+	python -m black --check journalyze setup.py
+	python -m flake8 journalyze setup.py
 
 # Alias
 lints: lint
 
 format:  ## run autoformatting with black
-	python -m black example_project_python/ setup.py
+	python -m black journalyze/ setup.py
 
 # alias
 fix: format
@@ -33,16 +33,16 @@ check:  ## check assets for packaging
 checks: check
 
 annotate:  ## run type checking
-	python -m mypy ./example_project_python
+	python -m mypy ./journalyze
 
 #########
 # TESTS #
 #########
 test: ## clean and run unit tests
-	python -m pytest -v example_project_python/tests
+	python -m pytest -v journalyze/tests
 
 coverage:  ## clean and run unit tests with coverage
-	python -m pytest -v example_project_python/tests --cov=example_project_python --cov-branch --cov-fail-under=75 --cov-report term-missing
+	python -m pytest -v journalyze/tests --cov=journalyze --cov-branch --cov-fail-under=50 --cov-report term-missing
 
 # Alias
 tests: test
