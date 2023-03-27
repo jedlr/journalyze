@@ -8,6 +8,4 @@ A Python library to facilitate the journinaling experience.
 
 ## Overview
 Journalyze:
-* Creates visual trackers (e.g. mood, sleep, habits)
-* Creates Journaling Wrapped (recaps like Spotify)
 * Fetches journaling prompts 
