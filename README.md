@@ -6,6 +6,8 @@ A Python library to facilitate the journinaling experience.
 
 [![](https://img.shields.io/github/issues/jedlr/journalyze?color=ff69b4)](https://github.com/jedlr/journalyze/issues)
 
+[![](https://img.shields.io/github/issues/jedlr/journalyze?color=ff69b4)](https://github.com/jedlr/journalyze/issues)
+
 ## Overview
 Journalyze:
 * Creates visual trackers (e.g. mood, sleep, habits)

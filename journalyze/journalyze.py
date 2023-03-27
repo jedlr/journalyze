@@ -22,3 +22,10 @@ class DailyPrompt:
     # allow the user to remove a prompt from the list of prompts.
     def remove_prompt(self, prompt):
         self.prompts.remove(prompt)
+=======
+def hello() -> str:
+    return "Hello, world!"
+
+
+def print_hello() -> None:
+    print(hello())
