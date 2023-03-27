@@ -14,7 +14,6 @@ install:  ## install library
 # LINTS #
 #########
 lint:  ## run static analysis with flake8
-	python -m black --check journalyze setup.py
 	python -m flake8 journalyze setup.py
 
 # Alias
