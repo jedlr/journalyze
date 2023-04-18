@@ -5,6 +5,7 @@ import csv
 from io import StringIO
 from unittest.mock import patch
 
+
 class TestDailyPrompt(unittest.TestCase):
     def setUp(self):
         self.prompts_file = 'test_prompts.csv'
@@ -31,6 +32,7 @@ class TestDailyPrompt(unittest.TestCase):
         prompt_to_remove = 'What was your favorite part of today?'
         self.dp.remove_prompt(prompt_to_remove)
         self.assertNotIn(prompt_to_remove, self.dp.prompts)
+
 
 class TestDailyPromptIntegration(unittest.TestCase):
     def setUp(self):
@@ -59,6 +61,7 @@ class TestDailyPromptIntegration(unittest.TestCase):
         prompt_to_remove = 'What was your favorite part of today?'
         self.dp.remove_prompt(prompt_to_remove)
         self.assertNotIn(prompt_to_remove, self.dp.prompts)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -7,5 +7,3 @@ if __name__ == "__main__":
 
     dp.add_prompt('What was something you learned today?')
     dp.remove_prompt('What was your favorite memory from last year?')
-
-

@@ -1,6 +1,7 @@
 import csv
 import random
 
+
 class DailyPrompt:
     # initialize the object and load the prompts from a CSV file.
     def __init__(self, prompts_file):
@@ -22,4 +23,3 @@ class DailyPrompt:
     # allow the user to remove a prompt from the list of prompts.
     def remove_prompt(self, prompt):
         self.prompts.remove(prompt)
-
