@@ -11,7 +11,7 @@ name = "journalyze"
 authors = [{name = "Johana De La Rosa", email = "jed2192@columbia.edu"}]
 description="A journaling prompt library"
 readme = "README.md"
-version = "0.0.1"
+version = "0.1.0"
 requires-python = ">=3.7"
 
 dependencies = []
