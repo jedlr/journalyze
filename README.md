@@ -34,6 +34,21 @@ Simply `import * from journalyze`, and then call any of the following functions:
 
 `remove_prompt()` removes a prompt from the list of prompts in csv file
 
+## Example
+Running the following code
+```python
+import journalyze as dp
+
+dp = DailyPrompt('journalyze/prompts.csv')
+prompt = dp.get_prompt()
+print(prompt)
+```
+Outputs something like this to the console
+```
+Describe yourself using the first 10 words that come to mind. Then list 10 words that you’d like to use to describe yourself. List a few ways to transform those descriptions into reality.
+```
+
+
 ## Details
 This project is a pure python project using modern tooling. It uses a `Makefile` as a command registry, with the following commands:
 - `make`: list available commands
