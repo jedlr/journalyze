@@ -23,6 +23,18 @@ class TestDailyPrompt(unittest.TestCase):
         prompt = self.dp.get_prompt()
         self.assertIn(prompt, self.prompts)
 
+    def test_get_prompt_easy(self):
+        #TODO
+        return
+
+    def test_get_prompt_hard(self):
+        #TODO
+        return
+
+    def test_get_prompt_num(self):
+       #TODO
+        return
+
     def test_add_prompt(self):
         new_prompt = 'What is something you learned today?'
         self.dp.add_prompt(new_prompt)
