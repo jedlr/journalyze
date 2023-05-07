@@ -14,30 +14,34 @@ class DailyPrompt:
 
     def get_prompt(self):
         """
-        This function andomly selects a prompt from the list of prompts and return it to the user.
+        This function randomly selects a prompt
+        from the list of prompts and return it to the user.
         Args:
             self
         Returns:
             prompt (data)
         """
         return random.choice(self.prompts)
-    
+
     def get_prompt_easy(self):
         """
-        This function randomly select an EASY/SHORT prompt from the list of prompts and return it to the user.
-        Args: 
+        This function randomly selects an EASY/SHORT prompt
+        from the list of prompts and return it to the user.
+        Args:
             self
         Returns:
             prompt (data)
-         Note: an easy prompt is defined here as a prompt with less than 11 words
+        Note: an easy prompt is defined here as
+        a prompt with less than 11 words
         """
         prompt = random.choice(self.prompts)
         if len(prompt.split()) < 11:
             return prompt
-    
+
     def get_prompt_hard(self):
         """
-        This function randomly select a HARD/LONG prompt from the list of prompts and return it to the user.
+        This function randomly select a HARD/LONG prompt
+        from the list of prompts and return it to the user.
         Args:
             self
         Returns:
@@ -47,7 +51,7 @@ class DailyPrompt:
         prompt = random.choice(self.prompts)
         if len(prompt.split()) > 11:
             return prompt
-    
+
     def get_prompt_num(self, num_prompts):
         """
         This function returns a number of prompts
@@ -61,7 +65,7 @@ class DailyPrompt:
 
     def add_prompt(self, prompt):
         """
-        This function allows the user to add a new prompt to the list of prompts.
+        This function adds a new prompt to the list of prompts.
         Args:
             Prompt to be appended
         Returns:
@@ -72,7 +76,7 @@ class DailyPrompt:
 
     def remove_prompt(self, prompt):
         """
-        This function allows the user to remove a prompt from the list of prompts.
+        This function removes a prompt from the list of prompts.
         Args:
             Prompt to be removed
         Returns:

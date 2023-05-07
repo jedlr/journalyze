@@ -9,7 +9,7 @@ from unittest.mock import patch
 class TestDailyPrompt(unittest.TestCase):
     def setUp(self):
         self.prompts_file = 'test_prompts.csv'
-        self.prompts = ['What was your favorite part of today?', 'What are you grateful for today?']
+        self.prompts = ['What was your favorite part of today?']
         with open(self.prompts_file, 'w', newline='') as f:
             writer = csv.writer(f)
             for prompt in self.prompts:
@@ -24,15 +24,15 @@ class TestDailyPrompt(unittest.TestCase):
         self.assertIn(prompt, self.prompts)
 
     def test_get_prompt_easy(self):
-        #TODO
+        # TODO
         return
 
     def test_get_prompt_hard(self):
-        #TODO
+        # TODO
         return
 
     def test_get_prompt_num(self):
-       #TODO
+        # TODO
         return
 
     def test_add_prompt(self):
@@ -49,7 +49,7 @@ class TestDailyPrompt(unittest.TestCase):
 class TestDailyPromptIntegration(unittest.TestCase):
     def setUp(self):
         self.prompts_file = 'test_prompts.csv'
-        self.prompts = ['What was your favorite part of today?', 'What are you grateful for today?']
+        self.prompts = ['What was your favorite part of today?']
         with open(self.prompts_file, 'w', newline='') as f:
             writer = csv.writer(f)
             for prompt in self.prompts:

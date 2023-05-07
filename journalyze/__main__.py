@@ -2,10 +2,10 @@ from .journalyze import DailyPrompt
 
 if __name__ == "__main__":
     dp = DailyPrompt('journalyze/prompts.csv')
-   
+
     prompt = dp.get_prompt()
     print(prompt)
-   
+
     easy_prompt = dp.get_prompt_easy()
     print(easy_prompt)
 
