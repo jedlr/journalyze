@@ -12,14 +12,35 @@ class DailyPrompt:
             for row in reader:
                 self.prompts.append(row[0])
 
-    # randomly select a prompt from the list of prompts and return it to the user.
     def get_prompt(self):
+        """
+        This function randomly selects a prompt
+        from the list of prompts and return it to the user.
+        Args:
+            self
+        Returns:
+            prompt (data)
+        """
         return random.choice(self.prompts)
 
-    # allow the user to add a new prompt to the list of prompts.
     def add_prompt(self, prompt):
+        """
+        This function adds a new prompt to the list of prompts.
+        Args:
+            Prompt to be appended
+        Returns:
+            None: see note
+        Note: appends the given prompt to the csv file of prompts
+        """
         self.prompts.append(prompt)
 
-    # allow the user to remove a prompt from the list of prompts.
     def remove_prompt(self, prompt):
+        """
+        This function removes a prompt from the list of prompts.
+        Args:
+            Prompt to be removed
+        Returns:
+            None: see note
+        Note: removes the given prompt from the list of prompts
+        """
         self.prompts.remove(prompt)
