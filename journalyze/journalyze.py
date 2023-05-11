@@ -23,6 +23,13 @@ class DailyPrompt:
         """
         return random.choice(self.prompts)
 
+    def get_prompt_easy(self):
+        easy_prompt = random.choice(self.prompts)
+        if len(easy_prompt.split()) < 11:
+            return easy_prompt
+        else:
+            return None
+
     def add_prompt(self, prompt):
         """
         This function adds a new prompt to the list of prompts.
