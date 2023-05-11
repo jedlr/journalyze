@@ -1,5 +1,6 @@
 import csv
 import random
+from typing import List
 
 
 class DailyPrompt:
@@ -21,12 +22,23 @@ class DailyPrompt:
         Returns:
             prompt (data)
         """
-        return random.choice(self.prompts)
+        prompt = random.choice(self.prompts)
+        return str(prompt)
 
     def get_prompt_easy(self):
+        """
+        This function randomly selects an EASY/SHORT prompt
+        from the list of prompts and return it to the user.
+        Args:
+            self
+        Returns:
+            prompt (data)
+        Note: an easy prompt is defined here as
+        a prompt with less than 11 words
+        """
         easy_prompt = random.choice(self.prompts)
         if len(easy_prompt.split()) < 11:
-            return easy_prompt
+            return str(easy_prompt)
         else:
             return None
 
