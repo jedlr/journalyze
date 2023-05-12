@@ -7,3 +7,7 @@ if __name__ == "__main__":
 
     dp.add_prompt('What was something you learned today?')
     dp.remove_prompt('What was your favorite memory from last year?')
+
+    ap = DailyPrompt('journalyze/affirmations.csv')
+    affirmation = ap.get_affirmation()
+    print(affirmation)
