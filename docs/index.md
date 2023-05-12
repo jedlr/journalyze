@@ -26,6 +26,9 @@ Simply `import * from journalyze`, and then call any of the following functions:
 
 `remove_prompt()` removes a prompt from the list of prompts in csv file
 
+**get_affirmation()**
+
+`get_affirmation()` randomly selects a positive affirmation from the list of affirmations in csv file
 ## Example
 Running the following code
 ```python

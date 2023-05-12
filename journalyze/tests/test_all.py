@@ -9,12 +9,19 @@ from unittest.mock import patch
 class TestDailyPrompt(unittest.TestCase):
     def setUp(self):
         self.prompts_file = 'test_prompts.csv'
+        self.affirmations_file = 'test_affirmations.csv'
         self.prompts = ['What was your favorite part of today?', 'What are you grateful for today?']
+        self.affirmations = ['I am capable of achieving my goals.', 'I am worthy of love and respect.']
         with open(self.prompts_file, 'w', newline='') as f:
             writer = csv.writer(f)
             for prompt in self.prompts:
                 writer.writerow([prompt])
         self.dp = DailyPrompt(self.prompts_file)
+        with open(self.affirmations_file, 'w', newline='') as f:
+            writer = csv.writer(f)
+            for affirmation in self.affirmations:
+                writer.writerow([affirmation])
+        self.ap = DailyPrompt(self.affirmations_file)
 
     def test_init(self):
         self.assertEqual(self.dp.prompts, self.prompts)
@@ -22,6 +29,10 @@ class TestDailyPrompt(unittest.TestCase):
     def test_get_prompt(self):
         prompt = self.dp.get_prompt()
         self.assertIn(prompt, self.prompts)
+
+    def test_get_affirmation(self):
+        affirmation = self.ap.get_affirmation()
+        self.assertIn(affirmation, self.affirmations)
 
     def test_add_prompt(self):
         new_prompt = 'What is something you learned today?'
