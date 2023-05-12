@@ -9,14 +9,14 @@ from unittest.mock import patch
 class TestDailyPrompt(unittest.TestCase):
     def setUp(self):
         self.prompts_file = 'test_prompts.csv'
-        self.affirmations_file = 'test_affirmations.csv'
         self.prompts = ['What was your favorite part of today?', 'What are you grateful for today?']
-        self.affirmations = ['I am capable of achieving my goals.', 'I am worthy of love and respect.']
         with open(self.prompts_file, 'w', newline='') as f:
             writer = csv.writer(f)
             for prompt in self.prompts:
                 writer.writerow([prompt])
         self.dp = DailyPrompt(self.prompts_file)
+        self.affirmations_file = 'test_affirmations.csv'
+        self.affirmations = ['I am capable of achieving my goals.', 'I am worthy of love and respect.']
         with open(self.affirmations_file, 'w', newline='') as f:
             writer = csv.writer(f)
             for affirmation in self.affirmations:
@@ -43,6 +43,18 @@ class TestDailyPrompt(unittest.TestCase):
         prompt_to_remove = 'What was your favorite part of today?'
         self.dp.remove_prompt(prompt_to_remove)
         self.assertNotIn(prompt_to_remove, self.dp.prompts)
+
+    def test_add_affirmation(self):
+        self.ap = DailyPrompt(self.affirmations_file)
+        new_affirmation = 'I am confident and resilient.'
+        self.ap.add_prompt(new_affirmation)
+        self.assertIn(new_affirmation, self.ap.prompts)
+
+    def test_remove_affirmation(self):
+        self.ap = DailyPrompt(self.affirmations_file)
+        affirmation_to_remove = 'I am capable of achieving my goals.'
+        self.ap.remove_prompt(affirmation_to_remove)
+        self.assertNotIn(affirmation_to_remove, self.ap.prompts)
 
 
 class TestDailyPromptIntegration(unittest.TestCase):
