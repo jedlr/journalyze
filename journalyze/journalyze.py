@@ -1,7 +1,5 @@
 import csv
 import random
-from typing import List
-
 
 class DailyPrompt:
     # initialize the object and load the prompts from a CSV file.
