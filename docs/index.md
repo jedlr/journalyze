@@ -15,13 +15,10 @@ pip install journalyze
 from journalyze import *
 
 # Randomly select and return a prompt from the list of prompts in csv file
-getPrompt()
+get_prompt()
 
 # Randomly select and return an easy/short prompt
 get_prompt_easy()
-
-# Randomly select and return a hard/long prompt
-get_prompt_hard()
 
 # Randomly select a given number of prompts and return
 get_prompt_num()
@@ -31,6 +28,9 @@ add_prompt()
 
 # Removes a given prompt from the list of prompts in csv file
 remove_prompt()
+
+# Searches the list of prompts for a keyword and returns a list of prompts that contain the keyword.
+search_prompt()
 ```
 
 ## Example
