@@ -7,6 +7,7 @@ include .bumpversion.cfg
 include pyproject.toml
 include Makefile
 include *.md
+include *.csv
 
 recursive-include docs *.bat
 recursive-include docs *.md

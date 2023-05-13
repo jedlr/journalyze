@@ -63,3 +63,18 @@ class DailyPrompt:
         Note: removes the given prompt from the list of prompts
         """
         self.prompts.remove(prompt)
+
+    def search_prompt(self, keyword):
+        """
+        This function searches the list of prompts for a keyword
+        and returns a list of prompts that contain the keyword.
+        Args:
+            keyword: word to search for
+        Returns:
+            result: list of prompts containing the keyword
+        """
+        result = []
+        for prompt in self.prompts:
+            if keyword.lower() in prompt.lower():
+                result.append(prompt)
+        return result
