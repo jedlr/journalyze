@@ -1,8 +1,9 @@
 # Welcome to journalyze's documentation!
 
 ## Overview
-Journalyze:
-* Fetches journaling prompts 
+`journalyze` is a python library that provides users with journaling prompts.
+Current features are described below.
+Some extra functionality in consideration includes sentiment classification.
 
 ## Installation
 ```
@@ -33,17 +34,29 @@ remove_prompt()
 ```
 
 ## Example
-Running the following code
-```python
-import journalyze as dp
-dp = DailyPrompt('journalyze/prompts.csv')
-prompt = dp.get_prompt()
-print(prompt)
-```
-Outputs something like this to the console
-```
-Describe yourself using the first 10 words that come to mind. Then list 10 words that you’d like to use to describe yourself. List a few ways to transform those descriptions into reality.
-```
+1. Running the following code
+   ```python
+   import journalyze as dp
+   dp = DailyPrompt('journalyze/prompts.csv')
+   prompt = dp.get_prompt()
+   print(prompt)
+   ```
+   Outputs something like this to the console
+   ```
+   Describe yourself using the first 10 words that come to mind. Then list 10 words that you’d like to use to describe yourself. List a few ways to transform those descriptions    into reality.
+   ```
+2. Running the following code
+   ```python
+   import journalyze as dp
+   dp = DailyPrompt('journalyze/prompts.csv')
+   prompt = dp.get_prompt()
+   search_prompt(favorite)
+   ```
+   Outputs something like this to the console
+   ```
+   'What was your favorite part of today?', 'What is your favorite book?'
+   ```
+
 
 ```eval_rst
 .. toctree::
