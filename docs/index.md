@@ -10,21 +10,27 @@ pip install journalyze
 ```
 
 ## How to Use
-After installing the library, there are currently 3 functions available for use.
+```python
+from journalyze import *
 
-Simply `import * from journalyze`, and then call any of the following functions:
+# Randomly select and return a prompt from the list of prompts in csv file
+getPrompt()
 
-**get_prompt()**
+# Randomly select and return an easy/short prompt
+get_prompt_easy()
 
-`getPrompt()` randomly selects a prompt from the list of prompts in csv file
+# Randomly select and return a hard/long prompt
+get_prompt_hard()
 
-**add_prompt()**
+# Randomly select a given number of prompts and return
+get_prompt_num()
 
-`add_prompt()` adds a new prompt to the list of prompts in csv file
+# Adds a new given prompt to the list of prompts in csv file
+add_prompt()
 
-**remove_prompt()**
-
-`remove_prompt()` removes a prompt from the list of prompts in csv file
+# Removes a given prompt from the list of prompts in csv file
+remove_prompt()
+```
 
 ## Example
 Running the following code

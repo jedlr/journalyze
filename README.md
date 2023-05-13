@@ -8,6 +8,7 @@ A Python library to facilitate the journinaling experience.
 [![codecov](https://codecov.io/gh/jedlr/journalyze/branch/main/graph/badge.svg)](https://codecov.io/gh/jedlr/journalyze)
 [![PyPI](https://img.shields.io/pypi/v/journalyze)](https://pypi.org/project/journalyze/)
 [![Documentation Status](https://readthedocs.org/projects/journalyze/badge/?version=latest)](https://journalyze.readthedocs.io/en/latest/?badge=latest)
+[![Docs](https://img.shields.io/badge/documentation-gh%20pages-%23fffb03)](https://jedlr.github.io/journalyze/)
 
 ## Overview
 Journalyze:
@@ -15,24 +16,30 @@ Journalyze:
 
 ## Installation
 ```
-pip install journalyze
+pip install --upgrade journalyze
 ```
 ## How to Use
-After installing the library, there are currently 3 functions available for use.
+```python
+from journalyze import *
 
-Simply `import * from journalyze`, and then call any of the following functions:
+# Randomly select and return a prompt from the list of prompts in csv file
+get_prompt()
 
-**get_prompt()**
+# Randomly select and return an easy/short prompt
+get_prompt_easy()
 
-`getPrompt()` randomly selects a prompt from the list of prompts in csv file
+# Randomly select a given number of prompts and return
+get_prompt_num()
 
-**add_prompt()**
+# Adds a new given prompt to the list of prompts in csv file
+add_prompt()
 
-`add_prompt()` adds a new prompt to the list of prompts in csv file
+# Removes a given prompt from the list of prompts in csv file
+remove_prompt()
 
-**remove_prompt()**
-
-`remove_prompt()` removes a prompt from the list of prompts in csv file
+# Searches the list of prompts for a keyword and returns a list of prompts that contain the keyword.
+search_prompt()
+```
 
 ## Example
 Running the following code
