@@ -11,8 +11,9 @@ A Python library to facilitate the journinaling experience.
 [![Docs](https://img.shields.io/badge/documentation-gh%20pages-%23fffb03)](https://jedlr.github.io/journalyze/)
 
 ## Overview
-Journalyze:
-* Fetches journaling prompts 
+`journalyze` is a python library that provides users with journaling prompts.
+Current features are described below.
+Some extra functionality in consideration includes sentiment classification.
 
 ## Installation
 ```
