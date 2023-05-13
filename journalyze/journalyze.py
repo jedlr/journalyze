@@ -1,6 +1,7 @@
 import csv
 import random
 
+
 class DailyPrompt:
     # initialize the object and load the prompts from a CSV file.
     def __init__(self, prompts_file):
